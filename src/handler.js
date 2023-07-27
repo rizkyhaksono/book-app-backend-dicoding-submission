@@ -209,7 +209,7 @@ const deleteBookByIdHandler = (request, h) => {
 
     const index = books.findIndex((b) => b.id === id);
     
-    if (index !== 1){
+    if (index !== -1){
         books.splice(index, 1);
         const response = h.response({
             status: 'success',
